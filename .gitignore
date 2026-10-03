@@ -1,0 +1,35 @@
+# Environment & Secrets (NEVER COMMIT)
+.env
+*.env
+*.env.local
+*.pem
+*.key
+secrets/
+
+# Python Virtual Environments
+venv/
+.venv/
+env/
+ENV/
+
+# Python Caches & Compiled Bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Testing & Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.coverage.*
+
+# IDE & Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS Generated Files
+.DS_Store
+Thumbs.db
+*.log

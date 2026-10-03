@@ -1,0 +1,8 @@
+event_id,event_type,employee_id,username,first_name,last_name,email,department,is_manager
+EVT-1001,JOINER,EMP-001,alice.eng,Alice,Engineer,alice.eng@company.com,Engineering,false
+EVT-1002,JOINER,EMP-002,bob.fin,Bob,Finance,bob.fin@company.com,Finance,false
+EVT-1003,MOVER,EMP-001,alice.eng,Alice,Engineer,alice.eng@company.com,Sales,true
+EVT-1004,LEAVER,EMP-002,bob.fin,Bob,Finance,bob.fin@company.com,Finance,false
+EVT-1001,JOINER,EMP-001,alice.eng,Alice,Engineer,alice.eng@company.com,Engineering,false
+EVT-1006,MOVER,EMP-999,ghost.user,Ghost,User,ghost@company.com,Engineering,false
+EVT-1007,JOINER,EMP-003,,Missing,LastName,missing@company.com,Sales,false

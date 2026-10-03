@@ -1,0 +1,86 @@
+{
+  "realm": "company",
+  "enabled": true,
+  "displayName": "Company Realm",
+  "sslRequired": "external",
+  "registrationAllowed": false,
+  "loginWithEmailAllowed": true,
+  "duplicateEmailsAllowed": false,
+  "resetPasswordAllowed": true,
+  "attributes": {
+    "unmanagedAttributePolicy": "ENABLED"
+  },
+  "roles": {
+    "realm": [
+      {
+        "name": "employee",
+        "description": "Baseline employee access role"
+      },
+      {
+        "name": "developer",
+        "description": "Engineering developer access role"
+      },
+      {
+        "name": "manager",
+        "description": "Management leadership role"
+      },
+      {
+        "name": "hr",
+        "description": "Human Resources access role"
+      },
+      {
+        "name": "finance",
+        "description": "Finance department access role"
+      },
+      {
+        "name": "sales",
+        "description": "Sales department access role"
+      }
+    ]
+  },
+  "clients": [
+    {
+      "clientId": "jml-automation",
+      "name": "JML Automation Service Account Client",
+      "enabled": true,
+      "publicClient": false,
+      "serviceAccountsEnabled": true,
+      "standardFlowEnabled": false,
+      "implicitFlowEnabled": false,
+      "directAccessGrantsEnabled": false,
+      "secret": "jml-automation-secret-demo-123",
+      "protocol": "openid-connect"
+    },
+    {
+      "clientId": "company-app",
+      "name": "Company Frontend Application",
+      "enabled": true,
+      "publicClient": true,
+      "standardFlowEnabled": true,
+      "implicitFlowEnabled": false,
+      "directAccessGrantsEnabled": true,
+      "redirectUris": [
+        "http://localhost:5000/*"
+      ],
+      "webOrigins": [
+        "http://localhost:5000"
+      ],
+      "protocol": "openid-connect"
+    }
+  ],
+  "users": [
+    {
+      "username": "service-account-jml-automation",
+      "enabled": true,
+      "serviceAccountClientId": "jml-automation",
+      "clientRoles": {
+        "realm-management": [
+          "manage-users",
+          "view-users",
+          "query-users",
+          "view-realm"
+        ]
+      }
+    }
+  ]
+}
